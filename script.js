@@ -2,18 +2,6 @@
 /// function som skriver ut länder
 import {printLands} from "./modules/lander.mjs";
 import { CitiesVisitedLiElement} from "./modules/CitiesVisited.mjs";
-
-// import { createFetch, base, accept, parse } from 'http-client'
-// let newsURL = "https://newsapi.org/v2/everything?q=" + "sweden" + "&from="+new Date().toISOString().slice(0, 10) +"&sortBy=publishedAt&apiKey=ce2d33c9daf84acbae294d547091fba1";
-
-// const fetch = createFetch(
-//   base(newsURL),  
-//   accept('application/json'),     
-//   parse('json')                      
-// )
-// fetch(newsURL).then(response => {
-//   console.log(response.jsonData)
-// })
 //In lander.mjs
 printLands();
 //In citiesVisted.mjs
