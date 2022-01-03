@@ -1,0 +1,72 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(43, 199, 238);
+}
+
+nav{
+ display: flex;
+ justify-content: center;
+ background-color: white;
+ padding: 20px 0px 20px 0px;
+ box-shadow: 0px 3px 25px 5px rgba(0,0,0,0.5);
+ position: absolute;
+ top:0;
+ width: 100%;
+}
+nav ul{
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+nav ul li{
+  cursor: pointer;
+}
+main{
+  display: flex;
+  gap: 2rem;
+}
+
+#stader{
+  background-color: white;
+  height: 100vh;
+  padding: 20px;
+}
+main ul li{
+  margin-top: 80px;
+  cursor: pointer;
+}
+
+#section{
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#clear{
+  margin-top: 80px;
+}
+h1, h3, p, img, button, ul, li{
+  animation: append-animate .3s linear;
+}
+img{
+  /* Max width Måste vara kvar */
+  max-width: 250px;
+  box-shadow: 0px 3px 25px 5px rgba(0,0,0,0.5);
+}
+
+@keyframes append-animate{
+  from{
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to{
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}

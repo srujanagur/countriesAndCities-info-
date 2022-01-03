@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-color: #424242;
+  color: white;
+}
+
+header ul {
+  margin-left: 100px;
+}
+
+header li {
+  padding: 40px;
+}
+
+#logoImg {
+  background-color: #424242;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 3rem;
+}
+
+li {
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+li:hover {
+  -webkit-text-decoration: underline 2px white;
+          text-decoration: underline 2px white;
+}
+
+#staderSection {
+  background-color: #617bc4;
+  color: white;
+}
+
+#stader li {
+  padding: 40px;
+  margin-left: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+img {
+  -webkit-box-shadow: 0px 3px 25px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 25px 5px rgba(0, 0, 0, 0.5);
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 9;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1/1/10/2;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+h1,
+h3,
+p,
+img,
+button,
+ul,
+li {
+  -webkit-animation: append-animate 0.3s linear;
+          animation: append-animate 0.3s linear;
+}
+
+h1,
+h3,
+p,
+button {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+@-webkit-keyframes append-animate {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes append-animate {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+#section {
+  margin-top: 60px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 40px;
+      grid-template-columns: 1fr 1fr 40px;
+  -ms-grid-rows: (1fr),9;
+      grid-template-rows: repeat(9, 1fr);
+  height: 35vh;
+}
+
+#section button {
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 8/2/10/3;
+}
+
+#section h1 {
+  font-size: 2rem;
+}
+
+#clear {
+  height: 35vh;
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 40px;
+      grid-template-columns: 1fr 1fr 40px;
+  -ms-grid-rows: (1fr),3;
+      grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+#clear img {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  max-width: 50%;
+}
+
+#clear p,
+#clear a,
+#clear h2 {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+button {
+  max-width: 300px;
+  background-color: #617bc4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 15px;
+}
+
+button:hover {
+  background-color: #424242;
+}
+
+#clear {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 40px;
+      grid-template-columns: 1fr 1fr 40px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    background-color: rgb(66, 66, 66);
+    color: white;
+    ul {
+        margin-left: 100px;
+    }
+    li {
+        padding: 40px;
+    }
+}
+
+#logoImg {
+    background-color: #424242;
+    box-shadow: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 3rem;
+}
+
+li {
+    cursor: pointer;
+    font-size: 1rem;
+    &:hover {
+        text-decoration: underline 2px white;
+    }
+}
+
+#staderSection {
+    background-color: rgb(97, 123, 196);
+    color: white;
+}
+
+#stader li {
+    padding: 40px;
+    margin-left: 40px;
+    flex-wrap: wrap;
+}
+
+img {
+    box-shadow: 0px 3px 25px 5px rgba(0, 0, 0, 0.5);
+    grid-area: 1/1/10/2;
+    justify-self: center;
+}
+
+h1,
+h3,
+p,
+img,
+button,
+ul,
+li {
+    animation: append-animate 0.3s linear;
+}
+
+h1,
+h3,
+p,
+button {
+    grid-column-start: 2;
+}
+
+@keyframes append-animate {
+    from {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+#section {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 40px;
+    grid-template-rows: repeat(9, 1fr);
+    height: 35vh;
+
+    button {
+        grid-area: 8/2/10/3;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+#clear {
+    height: 35vh;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 40px;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+    img {
+        grid-column-start: 1;
+        max-width: 50%;
+    }
+    p,
+    a,
+    h2 {
+        grid-column-start: 2;
+    }
+}
+
+button {
+    max-width: 300px;
+    background-color: rgb(97, 123, 196);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 15px;
+    &:hover {
+        background-color: rgb(66, 66, 66);
+    }
+}
+
+#clear {
+    display: grid;
+    grid-template-columns: 1fr 1fr 40px;
+}
