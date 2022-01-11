@@ -1,6 +1,6 @@
 
 /// function som skriver ut länder
-import {printLands} from "./modules/lander.mjs";
+import { printLands } from "./modules/lander.mjs";
 import { CitiesVisitedLiElement} from "./modules/CitiesVisited.mjs";
 //In lander.mjs
 printLands();

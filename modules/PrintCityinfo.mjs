@@ -12,24 +12,16 @@ export async function ReadWikiAPI(wikiURL) {
     let data = await response.json();
     return data;
 }
-
-
-// fetch("https://newsapi.org/v2/everything?q=Sverige&from=2021-11-29&sortBy=publishedAt&apiKey=ce2d33c9daf84acbae294d547091fba1")
-//     .then((response) => response.json())
-//     .then((data) =>
-//       console.log(data)
-//     );
-
 export async function readWeatherAync(stad) {
     //Fetches the correct API corresponding to the city you pressed in both Wikipedia and Weather
     let cityname = stad.stadname;
-    let url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&units=metric&appid=8a2c10b1ad16525bbb3226ccdfbfe9cb&lang=se";
+    let url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&units=metric&appid=9b2d81e48545e10c12620e6cd26606dd&lang=en";
     let g = await ReadAPI(url);
 
-    let wikiURL = "https://sv.wikipedia.org/w/rest.php/v1/search/page?q=" + cityname + "&limit=1";
+    let wikiURL = "https://en.wikipedia.org/w/rest.php/v1/search/page?q=" + cityname + "&limit=1";
     let w = await ReadWikiAPI(wikiURL);
 
-    let newsURL = "https://newsapi.org/v2/everything?q=" + cityname + "&from="+new Date().toISOString().slice(0, 10) +"&sortBy=publishedAt&apiKey=ce2d33c9daf84acbae294d547091fba1";
+    let newsURL = "https://newsapi.org/v2/everything?q=" + cityname + "&from="+new Date().toISOString().slice(0, 10) +"&sortBy=publishedAt&apiKey=8268ab577b594ff6be9bf907e1fb9cda";
     let n = await ReadWikiAPI(newsURL);
 
 
