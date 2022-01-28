@@ -1,6 +1,6 @@
 import { removeStorage } from "./localStorage.mjs";
 import { printVisitedCities, population } from "./CitiesVisitedInfo.mjs";
-import { switchColors } from "../lander.mjs";
+import { switchColors } from "./lander.mjs";
 
 export function CitiesVisitedLiElement() {
     //create li element to show "Cities I visited"(Städer jag besökt) list in the main

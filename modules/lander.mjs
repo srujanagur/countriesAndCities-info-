@@ -2,10 +2,11 @@ import { printStad } from "./stader.mjs";
 import { ReadWikiAPI } from "./PrintCityinfo.mjs";
 
 
+
 // export only top-level function (printLands)
 export function printLands() {
   //Get lander's data from JSON.
-  fetch("json/land.json")
+  fetch("./json/land.json")
     .then((response) => response.json())
     .then((data) => data.forEach((land) => printLand(land)))
     .catch((error) => {
@@ -70,9 +71,11 @@ export function switchColors(landName){
 
 //ONÖDIG FUNKTION BARA FÖR KUL
 async function printCountry(land){
+  console.log(land.countryname)
 
 let wikiURL = "https://en.wikipedia.org/w/rest.php/v1/search/page?q=" + land.countryname + "&limit=1";
 let s = await ReadWikiAPI(wikiURL);
+console.log(s);
 
 let newsURL = "https://newsapi.org/v2/everything?q=" + land.countryname + "&from="+new Date().toISOString().slice(0, 10) +"&sortBy=publishedAt&apiKey=8268ab577b594ff6be9bf907e1fb9cda";
     let n = await ReadWikiAPI(newsURL);
@@ -85,7 +88,9 @@ let contryDescription = document.createElement("h3");
 contryDescription.innerHTML = s.pages[0].description.charAt(0).toUpperCase() + s.pages[0].description.slice(1);
 //Fetches from Wiki to print out image of the contry
 let contryImg = document.createElement("img");
+console.log(s.pages[0].thumbnail);
 contryImg.src = s.pages[0].thumbnail.url;
+
 contryImg.src = fixWikiURL(contryImg.src);
 
 let description = document.createElement("p");

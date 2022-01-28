@@ -1,12 +1,12 @@
 [
     {
         "id": 1,
-        "countryname": "Sverige"
+        "countryname": "Sweden"
     },{
         "id": 2,
         "countryname": "Finland"
     },{
         "id": 3,
-        "countryname": "Norge"
+        "countryname": "Norway"
     }
 ]
