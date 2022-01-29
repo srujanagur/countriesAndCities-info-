@@ -6,7 +6,7 @@ export function CitiesVisitedLiElement() {
     //create li element to show "Cities I visited"(Städer jag besökt) list in the main
     let btnVisited = document.createElement("li");
    
-    btnVisited.innerText = "Städer jag besökt";
+    btnVisited.innerText = "Cities I Visited";
     
     btnVisited.className="Contries";
 
@@ -29,7 +29,7 @@ export function CitiesVisitedLiElement() {
         
         //create button for clear localstorage id in the main page
         let btnClear = document.createElement("button");
-        btnClear.innerText = "Töm min lista";
+        btnClear.innerText = "Clear List";
         clear.append(btnClear);
 
         //Add eventlistener and give the new function to clear the localstorage data

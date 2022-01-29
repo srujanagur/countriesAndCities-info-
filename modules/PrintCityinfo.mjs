@@ -36,27 +36,27 @@ export async function readWeatherAync(stad) {
     cityDescription.innerHTML = w.pages[0].description.charAt(0).toUpperCase() + w.pages[0].description.slice(1);
     //Fetches from Json to wite out population of city
     let stadP = document.createElement("p");
-    stadP.innerText = "Invånarantal: " + stad.population.toLocaleString();
+    stadP.innerText = "Present Population" + stad.population.toLocaleString();
     //Fetches img URL from API and puts it into imgtag to get an image of the city
     let cityImg = document.createElement("img");
     cityImg.src = w.pages[0].thumbnail.url;
     cityImg.src = fixWikiURL(cityImg.src);
     //Fetches the weather description from Weather API
     let weatherDescription = document.createElement("p");
-    weatherDescription.innerHTML = "Idag är det " + g.weather[0].description;
+    weatherDescription.innerHTML = "Today's weather" + g.weather[0].description;
     //Fetches Current temrature from weatherAPI
     let temp = document.createElement("p");
-    temp.innerHTML = "Nuvarande temperatur i " + cityname + " är " + g.main.temp + " °C";
+    temp.innerHTML = "Present temparature" + cityname + " are " + g.main.temp + " °C";
     //Fetches Max temp from weatherAPI
     let stadMaxMinTemp = document.createElement("p");
-    stadMaxMinTemp.innerText ="Idag är den högsta temperaturen " + g.main.temp_max + " °C" + " och den lägsta temperaturen " + g.main.temp_min + " °C";
+    stadMaxMinTemp.innerText ="Today high temparature is " + g.main.temp_max + " °C" + " and low temparature " + g.main.temp_min + " °C";
     //Fetches the pressure from WeatherAPI (dont know if we need this?)
     let stadPressure = document.createElement("p");
     stadPressure.innerText = "Pressure: " + g.main.pressure + "hPa";
 
     //Create Button for visited city
     let btnVisited = document.createElement("button");
-    btnVisited.innerText = "Jag har besökt denna stad!";
+    btnVisited.innerText = "I have visited this city";
 
     let section2 = document.getElementById("clear");
     section2.innerHTML="";
@@ -84,7 +84,7 @@ export async function readWeatherAync(stad) {
         if (!clickedbtn) {
             clickedbtn = true;
             let pressedBtnText = document.createElement("p");
-            pressedBtnText.innerText = "Fint! Staden är nu inlagd i dina besökta städer!";
+            pressedBtnText.innerText = "Nice! This city is added to your visited list";
             section.append(pressedBtnText);
             //In LocalStorage.mjs
             SaveToStorage(stad.id);

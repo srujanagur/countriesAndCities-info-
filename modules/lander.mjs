@@ -75,7 +75,7 @@ async function printCountry(land){
 
 let wikiURL = "https://en.wikipedia.org/w/rest.php/v1/search/page?q=" + land.countryname + "&limit=1";
 let s = await ReadWikiAPI(wikiURL);
-console.log(s);
+
 
 let newsURL = "https://newsapi.org/v2/everything?q=" + land.countryname + "&from="+new Date().toISOString().slice(0, 10) +"&sortBy=publishedAt&apiKey=8268ab577b594ff6be9bf907e1fb9cda";
     let n = await ReadWikiAPI(newsURL);
@@ -88,13 +88,13 @@ let contryDescription = document.createElement("h3");
 contryDescription.innerHTML = s.pages[0].description.charAt(0).toUpperCase() + s.pages[0].description.slice(1);
 //Fetches from Wiki to print out image of the contry
 let contryImg = document.createElement("img");
-console.log(s.pages[0].thumbnail);
+
 contryImg.src = s.pages[0].thumbnail.url;
 
 contryImg.src = fixWikiURL(contryImg.src);
 
 let description = document.createElement("p");
-description.innerHTML = "Här ovan ser du några av " + land.countryname + "s städer, tryck på en av dessa för mer infomration!"
+description.innerHTML = "Here above you can see " + land.countryname + "s cities, click to see the information!"
 
 let section = document.getElementById("section");
 section.innerHTML = "";
@@ -103,6 +103,7 @@ let section2 = document.getElementById("clear");
     section2.innerHTML="";
     //Fetches from newsApi to print title of the country
     let title = document.createElement("h2");
+    console.log(n.articles[0].title)
     title.innerHTML=n.articles[0].title;
 
     //Fetches from newsApi to print article of the country
